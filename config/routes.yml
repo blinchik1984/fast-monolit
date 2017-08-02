@@ -1,0 +1,9 @@
+main:
+  method: GET
+  route: /
+  handle:
+    controller: Monolit\Controllers\MyController
+    action: index
+    before:
+      middlware: testMiddlware
+      delegate: testDelegate

@@ -1,0 +1,28 @@
+{
+    "require": {
+        "wikimedia/composer-merge-plugin": "dev-master",
+        "dunaev/fast-route-engine": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Monolit\\Controllers\\" : "Controllers/"
+        }
+    },
+    "classmap": [
+        "Controllers"
+    ],
+    "extra": {
+        "merge-plugin": {
+            "include": [
+                "services/*/composer.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": true,
+            "merge-extra": false,
+            "merge-extra-deep": false,
+            "merge-scripts": false
+        }
+    }
+}

@@ -1,0 +1,9 @@
+services:
+  targetClientApi:
+    class: AdServer\Engine\Components\ClientLocal
+    arguments:
+      - /target
+  testMiddlware:
+    class: AdServer\Engine\Components\Test
+  testDelegate:
+    class: AdServer\Engine\Components\TestDelegate
